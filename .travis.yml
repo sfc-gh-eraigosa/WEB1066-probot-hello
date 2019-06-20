@@ -6,7 +6,7 @@ before_install:
   - docker pull node:8-onbuild
 
 install:
-  - docker build -t prebot-hello
+  - docker build -t prebot-hello .
 
 script:
   - docker run --rm prebot-hello npm run test
