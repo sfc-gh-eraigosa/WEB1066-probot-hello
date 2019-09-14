@@ -12,11 +12,9 @@ npm install
 npm start
 ```
 
-## Contributing
+## Why this repo was forked
 
-If you have suggestions for how probot-hello could be improved, or want to report a bug, open an issue! We'd love all and any contributions.
-
-For more, check out the [Contributing Guide](CONTRIBUTING.md).
+This repo is part of a Coursera course offered by UC Davis on continuous integration.
 
 ## License
 
