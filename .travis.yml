@@ -1,0 +1,6 @@
+language: node_js
+node_js:
+  - :"8.3"
+
+# because this is node_js Travis will use nmp install by default
+# Travis will also run npm tests automatically 
