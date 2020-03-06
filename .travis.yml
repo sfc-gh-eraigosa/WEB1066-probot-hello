@@ -1,6 +1,12 @@
+sudo: required
+services:
+  - docker
 
-language: node_js
-node_js:
-  - "13.6"
+  before_install:
+    - docker pull node:8-onbuild
+    - docker build -t probot-hello .
+
+script:
+  - docker run --rm probot-hello npm run test
 
 
