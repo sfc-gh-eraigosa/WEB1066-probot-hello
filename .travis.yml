@@ -13,4 +13,4 @@ script:
   - docker run --rm probot-hello npm run lint
 
 deploy:
-  provider: Heroku
+  provider: heroku
