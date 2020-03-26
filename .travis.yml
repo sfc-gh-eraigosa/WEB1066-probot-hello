@@ -8,3 +8,4 @@ before_install:
 
 script:
   - docker run  -it --rm probot-hello npm run test
+  - docker run  -it --rm probot-hello npm run lint
