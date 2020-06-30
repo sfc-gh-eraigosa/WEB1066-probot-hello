@@ -18,11 +18,11 @@ script:
       set -e; 
       if [ "{$NPM_TARGET}" = "test" ]; then
        docker run --rm probot-hello npm run $NPM_TARGET
-    else
-     echo "skipping docker tag"
-    fi;
-    docker images;
-    set +x +v;
+      else
+       echo "skipping docker tag"
+      fi;
+      docker images;
+      set +x +v;
 
 after_success:
     - docker tag probot-hello probot-hello:$(git rev-parse HEAD)    
