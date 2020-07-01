@@ -22,7 +22,7 @@ after_success:
     if [ "${NPM_TARGET}" = "test" ]; then
       docker tag probot-hello probot-hello:1.0 ;
     else
-      echo "Skipping Docker Tag"
+      echo "Skipping Docker Tag";
     fi;
-    docker images;]
+    docker images;
     set +x +v;
