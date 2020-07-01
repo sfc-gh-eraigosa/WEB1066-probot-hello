@@ -19,10 +19,10 @@ stages:
 jobs:
   include:
     - stage: npm-targets
-     name: "Test 8-Jessie"
-     install: skip
-     script:
-     - docker run --rm $DOCKER_USERNAME/probot-hello:$NODE_VERSION-1.0
-     env:
-     - NODE_VERSION=8-jessie
-     - NPM_TARGET=test
+      name: "Test 8-Jessie"
+      install: skip
+      script:
+      - docker run --rm $DOCKER_USERNAME/probot-hello:$NODE_VERSION-1.0
+      env:
+      - NODE_VERSION=8-jessie
+      - NPM_TARGET=test
