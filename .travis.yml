@@ -5,9 +5,6 @@ services:
 env:
   - NDOE_VERSION=8-jessie
 
-before_install:
-  - docker pull node:8-onbuild
-
 script:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker build -t node:$NODE_VERSION --build-arg NODE_IMAGE="node:${NODE_VERSION}" .
