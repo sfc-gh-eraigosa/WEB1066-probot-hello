@@ -27,3 +27,19 @@ jobs:
       env:
       - NODE_VERSION=8-jessie
       - NPM_TARGET=test
+    - stage: npm-targets
+      name: "Test 8-Jessie"
+      install: skip
+      script:
+      - docker run --rm $DOCKER_USERNAME/probot-hello:$NODE_VERSION-1.0 npm run test
+      env:
+      - NODE_VERSION=8-jessie
+      - NPM_TARGET=lint
+    - stage: npm-targets
+      name: "Test 8-Jessie"
+      install: skip
+      script:
+      - docker run --rm $DOCKER_USERNAME/probot-hello:$NODE_VERSION-1.0 npm run test
+      env:
+      - NODE_VERSION=8-jessie
+      - NPM_TARGET=coverage
