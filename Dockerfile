@@ -1,5 +1,6 @@
 # https://hub.docker.com/_/node/
-FROM node:8-onbuild
+ARG NODE_IMAGE=node:8-onbuild
+FROM $NODE_IMAGE
 
 # use debug to troubleshoot
 ENV LOG_LEVEL=error
@@ -14,12 +15,12 @@ ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 ENV PATH=$PATH:/home/node/.npm-global/bin
 
 # Lets install our app into /home/node
-COPY . /home/node/probot-hello
-RUN chown -R node:node /home/node/probot-hello
+COPY . ./probot-hello
+RUN chown -R node:node ./probot-hello
 
 # setup our app
 # non-root user  https://github.com/nodejs/docker-node/blob/e3ec2111af089e31321e76641697e154b3b6a6c3/docs/BestPractices.md#non-root-user
 USER node
 
-WORKDIR /home/node/probot-hello
+WORKDIR ./probot-hello
 RUN npm install
