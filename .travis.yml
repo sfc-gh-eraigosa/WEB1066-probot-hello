@@ -3,7 +3,7 @@ services:
   - docker
 
 env:
-  - NDOE_VERSION=8-jessie
+  - NODE_VERSION=8-jessie
 
 script:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
