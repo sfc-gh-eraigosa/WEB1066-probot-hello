@@ -1,0 +1,19 @@
+sudo: require
+services:
+  - docker
+befor_install:
+  - docker pull node:8-onbuild
+
+install:
+  - docker build -t probot-hello .
+
+script:
+  - docker run --rm probot-hello npm run test
+  - docker run --rm probot-hello npm run lint
+
+deploy:
+  provider: heroku
+  api_key: 5d93fa0c-e705-45f3-9766-410697536cfd
+  on: heroku_production
+  app: hello-probot-tarektj
+
