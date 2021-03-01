@@ -22,7 +22,7 @@ jobs:
     name: "Test 8-jessie"
     install: skip
     sript:
-    -docker run --rm $NPM_USERNAME/probot-hello:$NODE_VERSION-$(git rev-parse HEAD)
+      -docker run --rm $NPM_USERNAME/probot-hello:$NODE_VERSION-$(git rev-parse HEAD)
     env:
       - NODE_VERSION = 8-jessie
       - NODE_TARGET = test
@@ -30,7 +30,7 @@ jobs:
     name: "Test 8-jessie"
     install: skip
     sript:
-    -docker run --rm $NPM_USERNAME/probot-hello:$NODE_VERSION-$(git rev-parse HEAD)
+      -docker run --rm $NPM_USERNAME/probot-hello:$NODE_VERSION-$(git rev-parse HEAD)
     env:
       - NODE_VERSION = 8-jessie
       - NODE_TARGET = lint
@@ -38,7 +38,7 @@ jobs:
     name: "Test 8-jessie"
     install: skip
     sript:
-    -docker run --rm $NPM_USERNAME/probot-hello:$NODE_VERSION-$(git rev-parse HEAD)
+      -docker run --rm $NPM_USERNAME/probot-hello:$NODE_VERSION-$(git rev-parse HEAD)
     env:
       - NODE_VERSION = 8-jessie
       - NODE_TARGET = coverage
@@ -46,7 +46,7 @@ jobs:
     name: "Test 8-jessie"
     install: skip
     sript:
-    -docker run --rm $NPM_USERNAME/probot-hello:$NODE_VERSION-$(git rev-parse HEAD)
+      -docker run --rm $NPM_USERNAME/probot-hello:$NODE_VERSION-$(git rev-parse HEAD)
     env:
       - NODE_VERSION = 10.8-jessie
       - NODE_TARGET = test
@@ -54,7 +54,7 @@ jobs:
     name: "Test 8-jessie"
     install: skip
     sript:
-    -docker run --rm $NPM_USERNAME/probot-hello:$NODE_VERSION-$(git rev-parse HEAD)
+      -docker run --rm $NPM_USERNAME/probot-hello:$NODE_VERSION-$(git rev-parse HEAD)
     env:
       - NODE_VERSION = 10.8-jessie
       - NODE_TARGET = lint
@@ -62,7 +62,7 @@ jobs:
     name: "Test 8-jessie"
     install: skip
     sript:
-    -docker run --rm $NPM_USERNAME/probot-hello:$NODE_VERSION-$(git rev-parse HEAD)
+      -docker run --rm $NPM_USERNAME/probot-hello:$NODE_VERSION-$(git rev-parse HEAD)
     env:
       - NODE_VERSION = 10.8-jessie
       - NODE_TARGET = coverage
