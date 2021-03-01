@@ -4,7 +4,7 @@ services:
 
 env:
   - NODE_VERSION=8-jessie
-  - NODE_VERSION=10.8-jessie
+  #- NODE_VERSION=10.8-jessie
 
 script:
   - docker login -u="$NPM_USERNAME" -p="$NPM_PWD"
@@ -42,7 +42,7 @@ jobs:
     env:
       - NODE_VERSION = 8-jessie
       - NODE_TARGET = coverage
-  - stage: npm_targets
+/*  - stage: npm_targets
     name: "Test 8-jessie"
     install: skip
     sript:
@@ -66,3 +66,4 @@ jobs:
     env:
       - NODE_VERSION = 10.8-jessie
       - NODE_TARGET = coverage
+*/
