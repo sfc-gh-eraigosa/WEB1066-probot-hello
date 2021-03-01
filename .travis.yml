@@ -3,7 +3,7 @@ services:
   - docker
 
 env:
-  - NODE_VERSION=8-jessie
+  - NODE_VERSION=10.18-jessie
   #- NODE_VERSION=10.8-jessie
 
 script:
