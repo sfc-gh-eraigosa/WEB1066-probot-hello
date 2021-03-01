@@ -1,0 +1,14 @@
+sudo: required
+services:
+  - docker
+
+env:
+  - NODE_VERSION=10.18-jessie
+  #- NODE_VERSION=10.8-jessie
+
+script:
+  - docker login -u="$NPM_USERNAME" -p="$NPM_PWD"
+  - docker build -t node:NODE_VERSION --build-arg NODE_IMAGE=node:${NODE_VERSION}" .
+  - docker images
+  - docker tag node:$NODE_VERSION $NPM_USERNAME/probot-hello:$NODE_VERSION-$(git rev-parse HEAD)
+  - docker push node:$NPM_USERNAME/probot-hello:$NODE_VERSION-$(git rev-parse HEAD)
