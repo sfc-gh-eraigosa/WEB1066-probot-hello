@@ -12,7 +12,3 @@ script:
   - docker images
   - docker tag node:$NODE_VERSION $NPM_USERNAME/probot-hello:$NODE_VERSION-$(git rev-parse HEAD)
   - docker push node:$NPM_USERNAME/probot-hello:$NODE_VERSION-$(git rev-parse HEAD)
-
-stages:
-  - test
-  - npm_targets
