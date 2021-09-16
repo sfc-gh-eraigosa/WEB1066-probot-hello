@@ -34,6 +34,11 @@ docker run  -it --rm \
             bash -c 'npm install && npm run dev'
 ```
 
+So the windows version of this is as follows:
+```
+docker run  -it --rm -e APP_ID=abc -e PRIVATE_KEY=none -w /home/node/probot-hello-dev -v C:\Users\csilles\Documents\GitHub\WEB1066-probot-hello:/home/node/probot-hello-dev -p 3000:3000 docker-hello bash -c "npm install && npm run dev"
+```
+
 # Lint Test
 `docker run -it --rm probot-hello npm run lint`
 
