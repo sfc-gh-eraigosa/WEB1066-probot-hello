@@ -1,0 +1,12 @@
+ alias heroku='winpty docker run -it --rm --volume "$(pwd)":/workspace --volume "${HOME}/.local":/home/heroku/.local --volume "${HOME}/.cache":/home/heroku/.cache --volume "${HOME}/.netrc":/home/heroku/.netrc wenlock/herokucli:7.18.8.1'
+
+
+ alias heroku='winpty docker run -it --rm --volume "$(pwd)":/workspace wenlock/herokucli:7.18.8.1'
+
+docker run -it --rm -v ${pwd}:/workspace -v ${home}\.local:/home/heroku/.local -v ${home}\.netrc:/home/heroku/.netrc -v ${home}\.cache:/home/heroku/.cache wenlock/herokucli:7.18.8.1
+
+
+etrc:/home/heroku/.netrc" -v "${home}\.cache:/home/heroku/.cache" wenlock/herokucli:7.18.8.1 $*
+
+Function HEROKUCLI { docker run -it --rm -v ${pwd}:/workspace -v ${home}\.local:/home/heroku/.local -v ${home}\.netrc:/home/heroku/.netrc -v ${home}\.cache:/home/heroku/.cache wenlock/herokucli:7.18.8.1 $args}
+Set-Alias -Name heroku -Value HEROKUCLI
